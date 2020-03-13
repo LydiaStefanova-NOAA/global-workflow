@@ -344,7 +344,6 @@ cat >> input.nml <<EOF
   fix_negative = .true.
   icloud_f = 1
   mp_time = 150.
-  reiflag = ${reiflag:-"2"}
   $gfdl_cloud_microphysics_nml
 /
 

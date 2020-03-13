@@ -617,8 +617,10 @@ CICE_postdet()
         #BL2018
         stepsperhr=$((3600/$ICETIM))
         #BL2018
-        nhours=$(${NHOUR} ${CDATE} ${SYEAR}010100)
+        #nhours=$(${NHOUR} ${CDATE} ${SYEAR}010100)
+        nhours=$($NHOUR $CDATE ${year}010100)
         istep0=$((nhours*stepsperhr))
+        steps=$((nhours*stepsperhr))
         npt=$((FHMAX*$stepsperhr))      # Need this in order for dump_last to work
 
         histfreq_n=${histfreq_n:-6}
